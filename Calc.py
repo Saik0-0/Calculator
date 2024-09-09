@@ -56,6 +56,16 @@ def delete_func(num_of_entry):
         second_num_entry.delete(END)
 
 
+#   функция clear
+def clear_func(event):
+    global nums
+    first_num_entry.delete(0, END)
+    first_num_entry.focus()
+    second_num_entry.delete(0, END)
+    button_other_entry['text'] = 'Enter\nfirst'
+    nums = ['', '']
+
+
 #   функции операций
 def button_div_func(num_1, num_2):
     if re.fullmatch('(-)?0+(.)?(0+)?', second_num_entry.get()):
@@ -107,7 +117,7 @@ def button_sub_func(num_1, num_2):
 button_labels = ['1', '2', '3', '+',
                  '4', '5', '6', '-',
                  '7', '8', '9', 'delete',
-                 '+/-', '0', '.']
+                 '+/-', '0', '.', 'C']
 count_x = 20
 count_y = 130
 for i, label in enumerate(button_labels):
@@ -123,6 +133,9 @@ for i, label in enumerate(button_labels):
     elif label == '-':
         button_sub = Button(text=label)
         button = button_sub
+    elif label == 'C':
+        button_clear = Button(text=label, command=partial(clear_func, '<Button-1>'))
+        button = button_clear
     else:
         button = Button(text=label)
     button.place(height=25, width=40, x=count_x, y=count_y)

@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="deddcf33-8aec-4c7c-9523-ee08aab3f538" name="Changes" comment="Step 2 - Add File" />
+    <list default="true" id="deddcf33-8aec-4c7c-9523-ee08aab3f538" name="Changes" comment="Step 7 - Add File">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calc.py" beforeDir="false" afterPath="$PROJECT_DIR$/Calc.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2loHomre1SpQ1sNMR6lLlp6ymsz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.Calc.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -58,12 +72,65 @@
       <option name="project" value="LOCAL" />
       <updated>1725840032008</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Step 3 - Add File">
+      <option name="closed" value="true" />
+      <created>1725840315857</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1725840315858</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Step 4 - Add File">
+      <option name="closed" value="true" />
+      <created>1725883743939</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1725883743939</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Step 5 - Add File">
+      <option name="closed" value="true" />
+      <created>1725885142800</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1725885142800</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Step 6 - Add File">
+      <option name="closed" value="true" />
+      <created>1725887305886</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1725887305886</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Step 7 - Add File">
+      <option name="closed" value="true" />
+      <created>1725888356409</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1725888356409</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Step 7 - Add File">
+      <option name="closed" value="true" />
+      <created>1725889569861</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1725889569861</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Step 1 - Create File" />
     <MESSAGE value="Step 2 - Add File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Step 2 - Add File" />
+    <MESSAGE value="Step 3 - Add File" />
+    <MESSAGE value="Step 4 - Add File" />
+    <MESSAGE value="Step 5 - Add File" />
+    <MESSAGE value="Step 6 - Add File" />
+    <MESSAGE value="Step 7 - Add File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 7 - Add File" />
   </component>
 </project>
