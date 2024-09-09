@@ -1,7 +1,7 @@
 import re
 from functools import partial
 from tkinter import *
-from tkinter.messagebox import showinfo, askyesnocancel
+from tkinter.messagebox import showinfo
 
 root = Tk()
 root.title("Calculator")

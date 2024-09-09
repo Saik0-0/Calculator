@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="deddcf33-8aec-4c7c-9523-ee08aab3f538" name="Changes" comment="" />
+    <list default="true" id="deddcf33-8aec-4c7c-9523-ee08aab3f538" name="Changes" comment="Step 2 - Add File" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +42,28 @@
       <option name="presentableId" value="Default" />
       <updated>1725839685909</updated>
     </task>
+    <task id="LOCAL-00001" summary="Step 1 - Create File">
+      <option name="closed" value="true" />
+      <created>1725839854413</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725839854413</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Step 2 - Add File">
+      <option name="closed" value="true" />
+      <created>1725840032008</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725840032008</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Step 1 - Create File" />
+    <MESSAGE value="Step 2 - Add File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Step 2 - Add File" />
   </component>
 </project>
