@@ -25,10 +25,20 @@ def print_num(num):
 def take_num(event):
     global nums
     if first_num_entry.get() != '':
-        nums[0] = float(first_num_entry.get())
+        if first_num_entry.get().isdigit():
+            nums[0] = float(first_num_entry.get())
+        else:
+            first_num_entry.delete(0, END)
+            first_num_entry.focus()
+            showinfo('Ошибка', 'Введено некорректное число')
     if second_num_entry.get() != '':
-        nums[1] = float(second_num_entry.get())
-    else:
+        if second_num_entry.get().isdigit():
+            nums[1] = float(second_num_entry.get())
+        else:
+            showinfo('Ошибка', 'Введено некорректное число')
+            second_num_entry.delete(0, END)
+            second_num_entry.focus()
+    elif nums[0] != '':
         button_other_entry['text'] = 'Enter\nsecond'
         second_num_entry.focus()
     if nums[0] != '' and nums[1] != '':
