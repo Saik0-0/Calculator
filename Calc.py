@@ -6,8 +6,8 @@ from tkinter.messagebox import showinfo, showerror
 root = Tk()
 root.title("Calculator")
 root.geometry("230x300")
-root.resizable(False, False)
 root['bg'] = 'PaleVioletRed'
+root.resizable(False, False)
 
 nums = ['', '']   # хранение введённых чисел
 
