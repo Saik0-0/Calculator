@@ -71,7 +71,7 @@ def button_div_func(num_1, num_2):
     if re.fullmatch('(-)?0+(.)?(0+)?', second_num_entry.get()):
         showerror('Ошибка', 'Нельзя делить на ноль')
     else:
-        showinfo('Результат', str(num_1 // num_2))
+        showinfo('Результат', str(num_1 / num_2))
     global nums
     nums = ['', '']
     button_other_entry['text'] = 'Enter\nfirst'
