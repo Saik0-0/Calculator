@@ -1,7 +1,7 @@
 import re
 from functools import partial
 from tkinter import *
-from tkinter.messagebox import showinfo
+from tkinter.messagebox import showinfo, showerror
 
 root = Tk()
 root.title("Calculator")
@@ -10,7 +10,6 @@ root.resizable(False, False)
 root['bg'] = 'PaleVioletRed'
 
 nums = ['', '']   # хранение введённых чисел
-current_num = ''
 
 
 #   функция для ввода цифр с кнопок
@@ -30,12 +29,12 @@ def take_num(event):
         else:
             first_num_entry.delete(0, END)
             first_num_entry.focus()
-            showinfo('Ошибка', 'Введено некорректное число')
+            showerror('Ошибка', 'Введено некорректное число')
     if second_num_entry.get() != '':
         if second_num_entry.get().isdigit():
             nums[1] = float(second_num_entry.get())
         else:
-            showinfo('Ошибка', 'Введено некорректное число')
+            showerror('Ошибка', 'Введено некорректное число')
             second_num_entry.delete(0, END)
             second_num_entry.focus()
     elif nums[0] != '':
@@ -60,9 +59,9 @@ def delete_func(num_of_entry):
 #   функции операций
 def button_div_func(num_1, num_2):
     if re.fullmatch('(-)?0+(.)?(0+)?', second_num_entry.get()):
-        showinfo('Ошибка', 'Нельзя делить на ноль')
+        showerror('Ошибка', 'Нельзя делить на ноль')
     else:
-        showinfo('Результат целочисленного деления', str(num_1 // num_2))
+        showinfo('Результат', str(num_1 // num_2))
     global nums
     nums = ['', '']
     button_other_entry['text'] = 'Enter\nfirst'
@@ -73,9 +72,9 @@ def button_div_func(num_1, num_2):
 
 def button_mod_func(num_1, num_2):
     if re.fullmatch('(-)?0+(.)?(0+)?', second_num_entry.get()):
-        showinfo('Ошибка', 'Нельзя делить на ноль')
+        showerror('Ошибка', 'Нельзя делить на ноль')
     else:
-        showinfo('Результат взятия остатка', str(num_1 % num_2))
+        showinfo('Результат', str(num_1 % num_2))
     global nums
     nums = ['', '']
     button_other_entry['text'] = 'Enter\nfirst'
@@ -85,7 +84,7 @@ def button_mod_func(num_1, num_2):
 
 
 def button_sum_func(num_1, num_2):
-    showinfo('Результат сложения', str(num_1 + num_2))
+    showinfo('Результат', str(num_1 + num_2))
     global nums
     nums = ['', '']
     button_other_entry['text'] = 'Enter\nfirst'
@@ -95,7 +94,7 @@ def button_sum_func(num_1, num_2):
 
 
 def button_sub_func(num_1, num_2):
-    showinfo('Результат вычитания', str(num_1 - num_2))
+    showinfo('Результат', str(num_1 - num_2))
     global nums
     nums = ['', '']
     button_other_entry['text'] = 'Enter\nfirst'
