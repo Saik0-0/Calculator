@@ -23,15 +23,23 @@ def print_num(num):
 #   функция для получения введенных чисел
 def take_num(event):
     global nums
+
+    def is_number(s):
+        try:
+            float(s)
+            return True
+        except ValueError:
+            return False
+
     if first_num_entry.get() != '':
-        if first_num_entry.get().isdigit():
+        if is_number(first_num_entry.get()):
             nums[0] = float(first_num_entry.get())
         else:
             first_num_entry.delete(0, END)
             first_num_entry.focus()
             showerror('Ошибка', 'Введено некорректное число')
     if second_num_entry.get() != '':
-        if second_num_entry.get().isdigit():
+        if is_number(second_num_entry.get()):
             nums[1] = float(second_num_entry.get())
         else:
             showerror('Ошибка', 'Введено некорректное число')
@@ -64,6 +72,7 @@ def clear_func(event):
     second_num_entry.delete(0, END)
     button_other_entry['text'] = 'Enter\nfirst'
     nums = ['', '']
+
 
 #   функции операций
 def button_div_func(num_1, num_2):
