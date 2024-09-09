@@ -5,7 +5,7 @@ from tkinter.messagebox import showinfo
 
 root = Tk()
 root.title("Calculator")
-root.geometry("230x330")
+root.geometry("230x300")
 root.resizable(False, False)
 root['bg'] = 'PaleVioletRed'
 
@@ -23,6 +23,7 @@ def print_num(num):
 
 #   функция для получения введенных чисел
 def take_num(event):
+    global nums
     if first_num_entry.get() != '':
         nums[0] = float(first_num_entry.get())
     if second_num_entry.get() != '':
@@ -48,25 +49,49 @@ def delete_func(num_of_entry):
 
 #   функции операций
 def button_div_func(num_1, num_2):
-    if re.fullmatch('0+', second_num_entry.get()):
+    if re.fullmatch('(-)?0+(.)(0+)', second_num_entry.get()):
         showinfo('Ошибка', 'Нельзя делить на ноль')
     else:
         showinfo('Результат целочисленного деления', str(num_1 // num_2))
+    global nums
+    nums = ['', '']
+    button_other_entry['text'] = 'Enter\nfirst'
+    first_num_entry.delete(0, last=END)
+    second_num_entry.delete(0, last=END)
+    first_num_entry.focus()
 
 
 def button_mod_func(num_1, num_2):
-    if re.fullmatch('0+', second_num_entry.get()):
+    if re.fullmatch('(-)?0+(.)(0+)', second_num_entry.get()):
         showinfo('Ошибка', 'Нельзя делить на ноль')
     else:
         showinfo('Результат взятия остатка', str(num_1 % num_2))
+    global nums
+    nums = ['', '']
+    button_other_entry['text'] = 'Enter\nfirst'
+    first_num_entry.delete(0, last=END)
+    second_num_entry.delete(0, last=END)
+    first_num_entry.focus()
 
 
 def button_sum_func(num_1, num_2):
     showinfo('Результат сложения', str(num_1 + num_2))
+    global nums
+    nums = ['', '']
+    button_other_entry['text'] = 'Enter\nfirst'
+    first_num_entry.delete(0, last=END)
+    second_num_entry.delete(0, last=END)
+    first_num_entry.focus()
 
 
 def button_sub_func(num_1, num_2):
     showinfo('Результат вычитания', str(num_1 - num_2))
+    global nums
+    nums = ['', '']
+    button_other_entry['text'] = 'Enter\nfirst'
+    first_num_entry.delete(0, last=END)
+    second_num_entry.delete(0, last=END)
+    first_num_entry.focus()
 
 
 #   кнопки циферок
@@ -75,7 +100,7 @@ button_labels = ['1', '2', '3', '+',
                  '7', '8', '9', 'delete',
                  '+/-', '0', '.']
 count_x = 20
-count_y = 160
+count_y = 130
 for i, label in enumerate(button_labels):
     if label.isdigit() or label == '.':
         button = Button(text=label, command=partial(print_num, label))
@@ -102,22 +127,23 @@ for i, label in enumerate(button_labels):
 
 #  кнопки див мод след begin
 button_div = Button(text='Div')
-button_div.place(height=30, width=60, x=20, y=120)
+button_div.place(height=30, width=60, x=20, y=90)
 button_mod = Button(text='Mod')
-button_mod.place(height=30, width=60, x=150, y=120)
+button_mod.place(height=30, width=60, x=150, y=90)
 button_other_entry = Button(text='Enter\nfirst')
-button_other_entry.place(height=30, width=50, x=90, y=120)
-button_begin = Button(text='Begin')
-button_begin.place(height=30, width=70, x=80, y=20)
+button_other_entry.place(height=30, width=50, x=90, y=90)
 
 # поля ввода:
 first_num_entry = Entry(justify=RIGHT)
-first_num_entry.place(height=40, width=90, x=20, y=60)
+first_num_entry.place(height=40, width=90, x=20, y=30)
+first_num_entry.focus()
 second_num_entry = Entry(justify=RIGHT)
-second_num_entry.place(height=40, width=90, x=120, y=60)
+second_num_entry.place(height=40, width=90, x=120, y=30)
 
 # привязка функций к кнопкам
 button_other_entry.bind('<Button-1>', take_num)
 
 
 root.mainloop()
+
+print(nums)
