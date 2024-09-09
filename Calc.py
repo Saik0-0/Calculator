@@ -49,7 +49,7 @@ def delete_func(num_of_entry):
 
 #   функции операций
 def button_div_func(num_1, num_2):
-    if re.fullmatch('(-)?0+(.)(0+)', second_num_entry.get()):
+    if re.fullmatch('(-)?0+(.)?(0+)?', second_num_entry.get()):
         showinfo('Ошибка', 'Нельзя делить на ноль')
     else:
         showinfo('Результат целочисленного деления', str(num_1 // num_2))
@@ -62,7 +62,7 @@ def button_div_func(num_1, num_2):
 
 
 def button_mod_func(num_1, num_2):
-    if re.fullmatch('(-)?0+(.)(0+)', second_num_entry.get()):
+    if re.fullmatch('(-)?0+(.)?(0+)?', second_num_entry.get()):
         showinfo('Ошибка', 'Нельзя делить на ноль')
     else:
         showinfo('Результат взятия остатка', str(num_1 % num_2))
@@ -145,5 +145,3 @@ button_other_entry.bind('<Button-1>', take_num)
 
 
 root.mainloop()
-
-print(nums)
